@@ -102,7 +102,7 @@ export function UploadStation() {
           <div className="flex items-center gap-2">
             <Zap className="h-5 w-5 text-yellow-400" />
             <span>
-              Speed (CPU): <span className="font-bold text-yellow-300">~135 FPS</span>
+              Speed: <span className="font-bold text-yellow-300">~135 FPS</span>
             </span>
           </div>
         </div>
