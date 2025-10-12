@@ -3,7 +3,7 @@ import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
 import { Alert, AlertDescription, AlertTitle } from "@/components/ui/alert";
-import { Upload, FileVideo, ImageIcon, Loader2, AlertCircle, CheckCircle } from "lucide-react";
+import { Upload, Loader2, AlertCircle, CheckCircle, Gauge, Zap } from "lucide-react";
 
 const API_URL = import.meta.env.VITE_API_URL || "http://127.0.0.1:10000/api/process";
 
@@ -86,12 +86,27 @@ export function UploadStation() {
   return (
     <Card className="w-full max-w-4xl bg-card/50 backdrop-blur-sm border-glow shadow-tactical">
       <CardHeader>
-        <CardTitle className="flex items-center gap-2 text-2xl glow-text">
-          <Upload className="h-6 w-6" />
-          Upload & Analyze Thermal Asset
+        <CardTitle className="text-center text-4xl font-bold glow-text tracking-wider">
+          Vigilsense
         </CardTitle>
       </CardHeader>
       <CardContent className="space-y-6">
+        {/* Performance Metrics */}
+        <div className="flex justify-center gap-8 font-mono text-sm text-muted-foreground">
+          <div className="flex items-center gap-2">
+            <Gauge className="h-5 w-5 text-cyan-400" />
+            <span>
+              Accuracy (mAP@0.5): <span className="font-bold text-cyan-300">0.862</span>
+            </span>
+          </div>
+          <div className="flex items-center gap-2">
+            <Zap className="h-5 w-5 text-yellow-400" />
+            <span>
+              Speed (CPU): <span className="font-bold text-yellow-300">~135 FPS</span>
+            </span>
+          </div>
+        </div>
+
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
           {/* Input Column */}
           <div className="flex flex-col items-center justify-center p-6 border-2 border-dashed border-border rounded-lg upload-gradient">
