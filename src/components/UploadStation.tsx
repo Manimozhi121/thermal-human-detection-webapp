@@ -1,6 +1,7 @@
 import React, { useState, useRef } from "react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
+import { Card, CardContent, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
 import { Alert, AlertDescription, AlertTitle } from "@/components/ui/alert";
 import { Upload, Loader2, AlertCircle, CheckCircle, Gauge, Zap } from "lucide-react";
@@ -171,6 +172,11 @@ export function UploadStation() {
           </div>
         </div>
       </CardContent>
+      <CardFooter className="flex justify-center items-center pt-4">
+        <p className="text-xs text-muted-foreground font-mono">
+          Developed by <span className="font-bold text-primary/80">bit happens</span>
+        </p>
+      </CardFooter>
     </Card>
   );
 }
