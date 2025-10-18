@@ -5,7 +5,7 @@ The app connects to a FastAPI backend serving a fine-tuned **YOLOv8** model opti
 
 ---
 
-## 🧠 Tech Stack
+## Tech Stack
 - **Frontend:** React, TypeScript, Vite, TailwindCSS, shadcn/ui  
 - **Backend (API):** FastAPI → [Thermal Detection API](https://github.com/Manimozhi121/thermal-detection-api)  
 - **ML Model:** YOLOv8 → [VigilSense-TF25](https://github.com/Manimozhi121/Vigilsense-TF25)  
